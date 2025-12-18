@@ -16,11 +16,18 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+# main.py mein in lines ko replace karein
+app.include_router(ingest_router)
+app.include_router(chat_router)
+app.include_router(content_router)
+app.include_router(auth_router)
 
-app.include_router(ingest_router, prefix="/api")
-app.include_router(chat_router, prefix="/api")
-app.include_router(content_router, prefix="/api")
-app.include_router(auth_router, prefix="/api")
+
+
+# app.include_router(ingest_router, prefix="/api")
+# app.include_router(chat_router, prefix="/api")
+# app.include_router(content_router, prefix="/api")
+# app.include_router(auth_router, prefix="/api")
 
 @app.get("/")
 async def root():
