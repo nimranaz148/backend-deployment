@@ -1,0 +1,23 @@
+# .gitignore
+# Python-specific ignores
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+
+# Environment variables
+.env
+.env.*
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Test and build artifacts
+.coverage
+.mypy_cache/
+.pytest_cache/
+htmlcov/

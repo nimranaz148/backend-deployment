@@ -1,0 +1,33 @@
+# .dockerignore
+# Ignore Git and editor-specific files
+.git
+.vscode/
+.idea/
+
+# Ignore Python-specific files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+.coverage
+.mypy_cache/
+.pytest_cache/
+htmlcov/
+
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore logs and environment files
+*.log
+.env
+.env.*
+
+# Ignore Docusaurus specific (if any files are copied there)
+.docusaurus/
+.cache
