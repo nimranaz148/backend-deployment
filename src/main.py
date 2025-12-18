@@ -11,12 +11,10 @@ app = FastAPI(title="Physical AI Textbook RAG Chatbot")
 # CORS middleware for frontend integration - configured for mobile browser compatibility
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins
-    allow_credentials=False,
-    allow_methods=["*"],  # Sab methods allow karein (GET, POST, OPTIONS, etc.)
-    allow_headers=["*"],  # <--- YEH HAI FIX (Sab headers allow karein)
-    expose_headers=["Content-Type", "Content-Length"],
-    max_age=86400,
+    allow_origins=["*"], # Ya phir apna Vercel URL yahan likhein "https://your-site.vercel.app"
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(ingest_router, prefix="/api")
